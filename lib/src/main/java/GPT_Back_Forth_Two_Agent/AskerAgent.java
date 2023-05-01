@@ -14,9 +14,11 @@ public class AskerAgent {
 	
 	public String generateQuestionAbout(String theme) {
 		List<ChatMessage> messages = new ArrayList<>();
-		String msg = "Please act as a user that asks a chatbot questions and ask a profound and emotional question about " + theme;
 		String sys_msg = "you are to follow your instructions exactly"
 				+ " For example, if asked to add 2 and 5, you answer \"7\", you must not say any words except for the exact answer";
+		
+		String msg = "Please act as a user that asks a chatbot questions and ask a profound and emotional question about " + theme;
+		
 		ChatMessage m = new ChatMessage(ChatMessageRole.SYSTEM.value(), sys_msg);
 		messages.add(m);
 		m = new ChatMessage(ChatMessageRole.ASSISTANT.value(), msg);

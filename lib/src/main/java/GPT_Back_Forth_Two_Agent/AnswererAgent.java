@@ -22,7 +22,6 @@ public class AnswererAgent {
 		m = new ChatMessage(ChatMessageRole.USER.value(), question);
 		messages.add(m);
 		
-		
 		ChatCompletionRequest ccr = ChatCompletionRequest
 				.builder()
 				.messages(messages)
